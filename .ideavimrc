@@ -1,4 +1,4 @@
-" set leader key
+" set leader key" set leader key
 let mapleader = " "
 
 " black whole register
@@ -48,16 +48,16 @@ map ge ]b
 
 "window navigation
 "go to the left split
-map <S-h> <C-w>h
+map <C-h> <C-w>h
 
 "go to the right split
-map <S-l> <C-w>l
+map <C-l> <C-w>l
 
 "go to the top split
-map <S-k> <C-w>k
+map <C-k> <C-w>k
 
 "go to the down split
-map <S-j> <C-w>j
+map <C-j> <C-w>j
 
 "unsplit
 map <C-w>w <Action>(Unsplit)
@@ -156,3 +156,9 @@ map <leader>pf <Action>(CopyContentRootPath)
 map <A-k> <Action>(MoveLineUp)
 map <A-j> <Action>(MoveLineDown)
 
+" Press `f` to activate AceJump
+map f <Action>(AceAction)
+" Press `F` to activate Target Mode
+map F <Action>(AceTargetAction)
+" Press `g` to activate Line Mode
+map g <Action>(AceLineAction)
