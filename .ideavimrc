@@ -1,0 +1,158 @@
+" set leader key
+let mapleader = " "
+
+" black whole register
+noremap \ "_
+
+" paste over without overwriting default register
+xnoremap p P
+
+" sync Vim clipboard with OS clipboard
+set clipboard^=unnamed,unnamedplus
+
+"jump between angle bracket
+set matchpairs+=<:>
+
+" open config
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+
+"search config
+" highlight search results
+set hlsearch
+
+" remap remove search highlight
+nnoremap <Esc> :nohlsearch<cr>
+
+" case-insensitive search
+set ignorecase
+
+" enable case-sensitive search when the first capitalized
+set smartcase
+
+"search while typing
+set incsearch
+
+"word navigation
+"helps with navigating var names with snake and camel cases
+"move to the beginning of the next word
+map w [w
+
+"move to the end of the next word
+map e ]w
+
+"move to the beginning of the next word
+map b [b
+
+"move to the end of the previous word
+map ge ]b
+
+"window navigation
+"go to the left split
+map <S-h> <C-w>h
+
+"go to the right split
+map <S-l> <C-w>l
+
+"go to the top split
+map <S-k> <C-w>k
+
+"go to the down split
+map <S-j> <C-w>j
+
+"unsplit
+map <C-w>w <Action>(Unsplit)
+
+"unsplit all
+map <C-w>a <Action>(UnsplitAll)
+
+"global search
+"class search
+map <leader>sc <Action>(GotoClass)
+
+"files search
+map <leader>sf <Action>(GotoFile)
+
+"symbols search
+map <leader>ss <Action>(GotoSymbol)
+
+"search for action
+map <leader>sa <Action>(GotoAction)
+
+"goto declaration
+map <leader>gd <Action>(GotoDeclaration)
+
+"goto type declaration(definition)
+map <leader>gy <Action>(GotoTypeDeclaration)
+
+"goto implementations
+map <leader>gi <Action>(GotoImplementation)
+
+"goto test
+map <leader>gt <Action>(GotoTest)
+
+"goto superMethod
+map <leader>gm <Action>(GotoSuperMethod)
+
+"goto line
+map <leader>gl <Action>(GotoLine)
+
+"popups
+"QuickImplementations
+map <leader>im <Action>(QuickImplementations)
+"QuickTypeDefinition
+map <leader>td <Action>(QuickTypeDefinition)
+"show HoverInfo
+map <S-i> <Action>(ShowHoverInfo)
+"show File structure
+map <leader>oo <Action>(FileStructurePopup)
+"find usages
+map <leader>ug <Action>(FindUsages)
+"show usages
+map <leader>uu <Action>(ShowUsages)
+
+"search and replace
+map <S-f> <Action>(Find)
+map <S-r> <Action>(Replace)
+map <leader>ff <Action>(FindInPath)
+map <leader>fr <Action>(ReplaceInPath)
+
+"Refactor
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+"code actions
+map <leader>ca <Action>(ShowIntentionActions)
+"code generation
+map <S-space> <Action>(Generate)
+
+"error navigation
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+
+"jump last change and recent change
+map <leader>lc <Action>(JumpToLastChange)
+map <leader>ll <Action>(RecentLocations)
+
+"method Navigation
+map <A-[> <Action>(MethodUp)
+map <A-]> <Action>(MethodDown)
+
+"tab navigation
+map <A-l> <Action>(NextTab)
+map <A-h> <Action>(PreviousTab)
+
+"formatting
+map <leader><leader> <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ra <Action>(RearrangeCode)
+
+"path copy
+map <leader>pa <Action>(CopyAbsolutePath)
+map <leader>pn <Action>(CopyFileName)
+map <leader>pf <Action>(CopyContentRootPath)
+
+"move lines
+map <A-k> <Action>(MoveLineUp)
+map <A-j> <Action>(MoveLineDown)
+
